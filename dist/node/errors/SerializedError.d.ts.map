@@ -1,0 +1,1 @@
+{"version":3,"file":"SerializedError.d.ts","sourceRoot":"","sources":["../../../src/errors/SerializedError.ts"],"names":[],"mappings":"AAsBA,OAAO,SAAS,MAAM,aAAa,CAAC;AAEpC,MAAM,WAAW,eAAe;IAC9B,IAAI,EAAE,SAAS,CAAC;IAChB,OAAO,EAAE,MAAM,CAAC;IAChB,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,KAAK,CAAC,EAAE,MAAM,CAAC;IAEf,CAAC,GAAG,EAAE,MAAM,GAAG,OAAO,CAAC;CACxB"}
