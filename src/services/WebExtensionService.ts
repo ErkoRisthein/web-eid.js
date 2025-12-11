@@ -44,7 +44,7 @@ export default class WebExtensionService {
   }
 
   private receive(event: { data: ExtensionResponse }): void {
-    if (!event.data?.action.startsWith("web-eid:")) return;
+    if (!event.data?.action?.startsWith("web-eid:")) return;
 
     const message       = event.data;
     const suffix        = ["success", "failure", "ack"].find((s) => message.action.endsWith(s));

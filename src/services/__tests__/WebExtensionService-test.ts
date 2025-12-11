@@ -35,6 +35,23 @@ describe("WebExtensionService", () => {
     jest.restoreAllMocks();
   });
 
+  describe("receive", () => {
+    it("should ignore messages with data but no action property", async () => {
+      window.postMessage({ someOtherProperty: "value" }, "*");
+      await new Promise((resolve) => setTimeout(resolve));
+    });
+
+    it("should ignore messages with null data", async () => {
+      window.postMessage(null, "*");
+      await new Promise((resolve) => setTimeout(resolve));
+    });
+
+    it("should ignore messages with undefined data", async () => {
+      window.postMessage(undefined, "*");
+      await new Promise((resolve) => setTimeout(resolve));
+    });
+  });
+
   describe("action web-eid:warning", () => {
     it("should log a warning from web-eid:warning message", async () => {
       jest.spyOn(console, "warn").mockImplementation();
