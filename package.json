@@ -17,7 +17,6 @@
     "type": "git",
     "url": "git@github.com:web-eid/web-eid.js.git"
   },
-  "type": "module",
   "main": "dist/umd/web-eid.cjs",
   "module": "dist/node/web-eid.js",
   "types": "dist/node/web-eid.d.ts",
