@@ -37,18 +37,30 @@ describe("WebExtensionService", () => {
 
   describe("receive", () => {
     it("should ignore messages with data but no action property", async () => {
+      jest.spyOn(console, "warn").mockImplementation();
+
       window.postMessage({ someOtherProperty: "value" }, "*");
       await new Promise((resolve) => setTimeout(resolve));
+
+      expect(console.warn).not.toHaveBeenCalled();
     });
 
     it("should ignore messages with null data", async () => {
+      jest.spyOn(console, "warn").mockImplementation();
+
       window.postMessage(null, "*");
       await new Promise((resolve) => setTimeout(resolve));
+
+      expect(console.warn).not.toHaveBeenCalled();
     });
 
     it("should ignore messages with undefined data", async () => {
+      jest.spyOn(console, "warn").mockImplementation();
+
       window.postMessage(undefined, "*");
       await new Promise((resolve) => setTimeout(resolve));
+
+      expect(console.warn).not.toHaveBeenCalled();
     });
   });
 
